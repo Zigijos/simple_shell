@@ -27,7 +27,7 @@ int _eputchar(char c)
 {
 	static int i;
 	static char buf[WRITE_BUF_SIZE];
-	
+
 	if (c == BUF_FLUSH || i >= WRITE_BUF_SIZE)
 	{
 		write(2, buf, i);
@@ -49,7 +49,7 @@ int _putfd(char c, int fd)
 {
 	static int i;
 	static char buf[WRITE_BUF_SIZE];
-	
+
 	if (c == BUF_FLUSH || i >= WRITE_BUF_SIZE)
 	{
 		write(fd, buf, i);
@@ -69,7 +69,7 @@ int _putfd(char c, int fd)
 int _putsfd(char *str, int fd)
 {
 	int i = 0;
-	
+
 	if (!str)
 		return (0);
 	while (*str)
